@@ -10,9 +10,9 @@ async def how_old_are_you(response: Response):
     name = await response.ask("What is your name?")
     await response.tell(f"Hello, {name}!")
 
-    button = await response.ask("Are you 18+?", inline_keyboard=[["✅ I am 18"], ["❌ I am not 18"]])
+    answer = await response.ask("Are you 18+?", inline_keyboard=[["✅ I am 18"], ["❌ I am not 18"]])
 
-    if button == "✅ I am 18":
+    if answer == "✅ I am 18":
         await response.tell("❤️")
     else:
         await response.tell("🙈")

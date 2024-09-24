@@ -2310,7 +2310,7 @@ ujson = ">=5.5.0,<6"
 type = "git"
 url = "https://github.com/engineering-friends/lessmore.git"
 reference = "HEAD"
-resolved_reference = "e213dc8cd82ac22ea5fe25941d847152a72b4c6b"
+resolved_reference = "9bb798d453da1cb33f615a0e855cfa5cd94c3afd"
 subdirectory = "source/python/libs/lessmore.utils"
 
 [[package]]
@@ -8169,8 +8169,8 @@ yadisk = ">=2.1.0,<3"
 [package.source]
 type = "git"
 url = "https://github.com/engineering-friends/lessmore.git"
-reference = "workflow-9"
-resolved_reference = "fb9441798bc00408e84a11821b645e49d83298e3"
+reference = "HEAD"
+resolved_reference = "9bb798d453da1cb33f615a0e855cfa5cd94c3afd"
 subdirectory = "source/python/libs/teletalk"
 
 [[package]]
@@ -9095,4 +9095,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "2915c964322bb68be1d14cf026d033df56b346a94e03a764cdeefd0d57bd2ed9"
+content-hash = "49b8201f46f03319b9f5bed97d4a5f8a7f349cebb2e1fa7a33d9248ae99674e3"

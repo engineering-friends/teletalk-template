@@ -10,6 +10,7 @@ python = "^3.12"
 
 lessmore-utils = { git = "https://github.com/engineering-friends/lessmore.git", subdirectory = "source/python/libs/lessmore.utils" } # could put in the dependency of the discord-to-telegram-forwarder, but it will soon be obsolete
 teletalk = { git = "https://github.com/engineering-friends/lessmore.git", subdirectory = "source/python/libs/teletalk" } # could put in the dependency of the discord-to-telegram-forwarder, but it will soon be obsolete
+aiogram = ">=3"
 
 [build-system]
 requires = ["poetry-core"]

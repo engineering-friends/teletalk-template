@@ -6,6 +6,7 @@ from teletalk.models.response import Response
 
 import os
 
+
 async def how_old_are_you(response: Response):
     name = await response.ask("What is your name?")
     await response.tell(f"Hello, {name}!")
@@ -17,7 +18,9 @@ async def how_old_are_you(response: Response):
     else:
         await response.tell("🙈")
 
-    await response.tell("See more examples at [teletalk github](https://github.com/engineering-friends/lessmore/tree/master/source/python/libs/teletalk/teletalk/examples). Teletalk is on the very early state of development, expect bugs and breaking changes. You're welcome to contribute 🤍")
+    await response.tell(
+        "See more examples at [teletalk github](https://github.com/engineering-friends/lessmore/tree/master/source/python/libs/teletalk/teletalk/examples). Teletalk is on the very early state of development, expect bugs and breaking changes. You're welcome to contribute 🤍"
+    )
 
     return response.ask()  # go to main menu
 
@@ -38,7 +41,6 @@ async def main_menu(response: Response):
 
 
 async def main():
-
     # - Get telegram bot token from env
 
     if "TELEGRAM_BOT_TOKEN" not in os.environ:
@@ -46,14 +48,14 @@ async def main():
 
     # - Run app
 
-    await App(
+    await App().start_polling(
         bot=os.environ["TELEGRAM_BOT_TOKEN"],
         command_starters={"/start": main_menu},
         commands=[
             BotCommand(command="start", description="Start the bot"),
             BotCommand(command="cancel", description="Cancel the current operation"),
         ],
-    ).start_polling()
+    )
 
 
 if __name__ == "__main__":

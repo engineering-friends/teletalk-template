@@ -25,7 +25,7 @@ async def how_old_are_you(response: Response):
     return response.ask()  # go to main menu
 
 
-async def main_menu(response: Response):
+async def menu(response: Response):
     await response.ask(
         "⚙️ *Выбери действие*",
         inline_keyboard=[
@@ -48,9 +48,8 @@ async def main():
 
     # - Run app
 
-    await App().start_polling(
-        bot=os.environ["TELEGRAM_BOT_TOKEN"],
-        command_starters={"/start": main_menu},
+    await App(bot=os.environ["TELEGRAM_BOT_TOKEN"]).run(
+        command_starters={"/start": menu},
         commands=[
             BotCommand(command="start", description="Start the bot"),
             BotCommand(command="cancel", description="Cancel the current operation"),
